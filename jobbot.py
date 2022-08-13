@@ -1,3 +1,4 @@
+from ssl import ALERT_DESCRIPTION_HANDSHAKE_FAILURE
 import time
 from time import sleep 
 import selenium
@@ -45,20 +46,31 @@ for i in range(len(jobads)-1,len(jobads)):
             
             
             
-            # soup = bs(driver.page_source,features="html.parser")
+            soup = bs(driver.page_source,features="html.parser")
             # found_key = False
 
-            # title_finder = soup.find('title')
+            title_finder = soup.find('title')
             # # for title in title_finder:
-            # titletext = title_finder.get_text()
-            # print(titletext)
+            titletext = title_finder.get_text()
+            print(titletext)
             time.sleep(.5)
 
-            # company_finder = soup.find_all('div', class_='icl-u-lg-mr--sm icl-u-xs-mr--xs')
+            company_finder = soup.find_all('div', class_='icl-u-lg-mr--sm icl-u-xs-mr--xs')
             # print('c,', len(company_finder))
             # for company in company_finder:
-            #     companytext = company.find('a').get_text()
-            #     print(companytext)
+            for company in company_finder:
+                if(company.find('a')):
+                    print(company.find('a').get_text())
+
+
+            job_finder = soup.find('div', class_='jobsearch-jobDescriptionText')
+            print(job_finder)
+            all_text = job_finder.find_all('br')
+            # for text in all_text:
+                
+
+            # companytext = company_finder.get_text()
+            # print(companytext)
             # time.sleep(.5)
 
             # key_finder = soup.find_all('div', class_='jobsearch-jobDescriptionText')
