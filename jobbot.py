@@ -13,9 +13,9 @@ starttime = time.time() # to track how much time the code takes
 driver = wb.Firefox() # initialize driver
 
 # USER INPUT (change this based on needed search)
-descrip = ['NEPA', 'environmental assessments', 'field surveys', 'wetland delineation', 'sampling']
-location = 'Texas'
-position = 'environmental scientist'
+descrip = ["NEPA", "environmental assessments", "field surveys", "wetland delineation", "sampling"]
+location = "Texas"
+position = "environmental scientist"
 
 # Initialize data lists
 url_list = []
