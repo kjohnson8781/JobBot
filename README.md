@@ -2,6 +2,8 @@
 
 JobBot is a python script that automatically searches through job postings on Indeed for user inputted keywords. The script obtains the Job Title, Company Name, and URL for all the job results that have a description that matches a keyword. The data is then aggregated into a csv file for a simple, effortless end-user experience.
 
+![](https://github.com/kjohnson8781/JobBot/blob/main/JobBotPresentation.gif) 
+
 ## Installation
 
 1. Install [geckodriver](https://github.com/mozilla/geckodriver/releaseshttps://github.com/mozilla/geckodriver/releases)
